@@ -1,7 +1,9 @@
+import { Button } from "@chakra-ui/react";
+
 function App() {
   return (
     <>
-      <div className="text-yellow-400">hello</div>
+
     </>
   );
 }
