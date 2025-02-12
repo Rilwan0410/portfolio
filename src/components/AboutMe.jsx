@@ -5,11 +5,11 @@ export default function AboutMe() {
     <Card.Root mt='10'>
         <Card.Body>
             <div className="about-me">
-              <Heading size="7xl">Rilwan Etti</Heading>
-              <Heading size="3xl" fontWeight={"normal"} className="text-cyan-500">
+              <Heading size={{ sm:'2xl', md:"5xl", lg:"7xl"}}>Rilwan Etti</Heading>
+              <Heading size={{md:"3xl"}} fontWeight={"normal"} className="text-cyan-500">
                 Full Stack Developer
               </Heading>
-              <Text mt="3" style={{ lineHeight: "35px" }} fontSize="lg">
+              <Text mt="3" style={{ lineHeight: "35px" }} fontSize={{md:'lg'}}>
                 {" "}
                 My Name is Rilwan Etti and I am a{" "}
                 <span style={{ fontWeight: "bold" }}>
