@@ -14,10 +14,11 @@ import CLIEmployeeTrackerScreenshot from "../assets/img/cli-employee-tracker.png
 import { useState } from "react";
 
 export default function Projects() {
-  const [collapse, setCollapse] = useState(false);
-  const projects = [
+  const [projects, setProjects] = useState([
     {
+      id: 1,
       title: "Video Game Discovery App",
+      collapse: false,
       technologies: ["React", "React Router", "Chakra UI", "Tailwind CSS"],
       imageSrc: videoGameAppScreenshot,
       description:
@@ -27,7 +28,9 @@ export default function Projects() {
       gitRepo: "https://github.com/Rilwan0410/video-game-discovery-app",
     },
     {
+      id: 2,
       title: "Issue Tracker",
+      collapse: false,
       technologies: ["NextJS", "Radix UI", "Prisma", "Tailwind CSS"],
       imageSrc: issueTrackerScreenshot,
       description:
@@ -37,7 +40,9 @@ export default function Projects() {
       gitRepo: "https://github.com/Rilwan0410/issue_tracker",
     },
     {
+      id: 3,
       title: "HBO Clone",
+      collapse: false,
       technologies: ["NextJS", "React", "Tailwind CSS"],
       imageSrc: HBOCloneScreenshot,
       description: "This is clone of the popular App HBO",
@@ -46,7 +51,9 @@ export default function Projects() {
       gitRepo: "https://github.com/Rilwan0410/HBO_CLONE",
     },
     {
+      id: 4,
       title: "CLI Employee Tracker",
+      collapse: false,
       technologies: ["JavaScript", "Node JS", "MySQL"],
       imageSrc: CLIEmployeeTrackerScreenshot,
       description:
@@ -55,7 +62,15 @@ export default function Projects() {
       videoURL: "https://watch.screencastify.com/v/zrqiK8EbHtwFVm4KKHPY",
       gitRepo: "https://github.com/Rilwan0410/cli-employee-tracker",
     },
-  ];
+  ]);
+
+  const collapseText = (id, val) => {
+    let obj = projects.filter((proj) => proj.id === id);
+
+    obj = Object.assign(...obj, { collapse: !val });
+
+    setProjects([...projects]);
+  };
   return (
     <div style={{ marginTop: "150px" }} id="Projects">
       <Heading style={{ fontFamily: "Montserrat" }} mb="10" size="5xl">
@@ -71,6 +86,11 @@ export default function Projects() {
           <Card.Root
             key={i}
             width={{ lg: "370px" }}
+            height={`${
+              project.description.length > 100 && project.collapse === true
+                ? "fit-content"
+                : "550px"
+            }`}
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
             p="2"
           >
@@ -80,16 +100,16 @@ export default function Projects() {
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>
               <Card.Description>
-                {project.description.length > 100 && collapse === false
-                  ? `${project.description.substring(0, 100)}...`
+                {project.description.length > 80 && project.collapse === false
+                  ? `${project.description.substring(0, 80)}...`
                   : project.description}
                 {project.description.length > 100 && (
                   <Button
                     size="2xs"
-                    onClick={() => setCollapse(!collapse)}
+                    onClick={() => collapseText(project.id, project.collapse)}
                     variant="subtle"
                   >
-                    {collapse === false ? "Read More" : "Read Less"}
+                    {project.collapse === false ? "Read More" : "Read Less"}
                   </Button>
                 )}
               </Card.Description>
