@@ -8,7 +8,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import videoGameAppScreenshot from "../assets/img/video-game-discovery-app.png";
-import issueTrackerScreenShot from "../assets/img/issue_tracker.png";
+// import issueTrackerScreenShot from "../assets/img/issue_tracker.png";
 import HBOCloneScreenshot from "../assets/img/hbo-clone.png";
 import CLIEmployeeTrackerScreenshot from "../assets/img/cli-employee-tracker.png";
 import { useState } from "react";
