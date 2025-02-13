@@ -8,7 +8,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import videoGameAppScreenshot from "../assets/img/video-game-discovery-app.png";
-// import issueTrackerScreen from "../assets/img/issue_tracker.png";
+import issueTrackerScreenshot from "../assets/img/issue-tracker.png"
 import HBOCloneScreenshot from "../assets/img/hbo-clone.png";
 import CLIEmployeeTrackerScreenshot from "../assets/img/cli-employee-tracker.png";
 import { useState } from "react";
@@ -28,7 +28,7 @@ export default function Projects() {
     {
       title: "Issue Tracker",
       technologies: ["NextJS", "Radix UI", "Prisma", "Tailwind CSS",],
-      imageSrc: videoGameAppScreenshot,
+      imageSrc: issueTrackerScreenshot,
       description:
         "This is an issue tracker application that allows you to create issues",
       liveSite: "",
