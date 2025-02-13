@@ -8,7 +8,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import videoGameAppScreenshot from "../assets/img/video-game-discovery-app.png";
-import issueTrackerScreenshot from "../assets/img/issue-tracker.png"
+import issueTrackerScreenshot from "../assets/img/issue-tracker.png";
 import HBOCloneScreenshot from "../assets/img/hbo-clone.png";
 import CLIEmployeeTrackerScreenshot from "../assets/img/cli-employee-tracker.png";
 import { useState } from "react";
@@ -20,21 +20,21 @@ export default function Projects() {
       title: "Video Game Discovery App",
       technologies: ["React", "React Router", "Chakra UI", "Tailwind CSS"],
       imageSrc: videoGameAppScreenshot,
-      description: "This is an Game application built using react",
+      description:
+        "This is an Game application built using React, React Router, using Chakra UI and Tailwind CSS. This app allows you to look and find valuable information about any game you can think about. Using the Rawg database, there are over 800,000 video games that you can filter through and find out information about multiple games as well as the platforms they are available for and more.",
       liveSite: "https://video-game-discovery-app-nu.vercel.app/",
       videoURL: "",
       gitRepo: "https://github.com/Rilwan0410/video-game-discovery-app",
     },
     {
       title: "Issue Tracker",
-      technologies: ["NextJS", "Radix UI", "Prisma", "Tailwind CSS",],
+      technologies: ["NextJS", "Radix UI", "Prisma", "Tailwind CSS"],
       imageSrc: issueTrackerScreenshot,
       description:
         "This is an issue tracker application that allows you to create issues",
       liveSite: "",
       videoURL: "",
       gitRepo: "https://github.com/Rilwan0410/issue_tracker",
-      
     },
     {
       title: "HBO Clone",
@@ -57,7 +57,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div style={{ marginTop: "150px" }} id='Projects'>
+    <div style={{ marginTop: "150px" }} id="Projects">
       <Heading style={{ fontFamily: "Montserrat" }} mb="10" size="5xl">
         Projects
       </Heading>
@@ -97,8 +97,9 @@ export default function Projects() {
                 className="flex flex-wrap gap-3 "
                 style={{ padding: "20px 0" }}
               >
-                {project.technologies.map((tech) => (
+                {project.technologies.map((tech, i) => (
                   <Badge
+                    key={i}
                     colorPalette={"cyan"}
                     p={"2"}
                     style={{ borderRadius: "10px" }}
