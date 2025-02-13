@@ -3,7 +3,11 @@
 
 body {
   font-family: "Montserrat";
-  padding:55px 0;
+  padding: 55px 0;
+}
+* {
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
 }
 .navbar {
   /* padding-inline:10px;
@@ -12,7 +16,6 @@ body {
   padding: 8px 5px;
 }
 
-
-.about-me{
+.about-me {
   padding: 50px 20px;
 }
