@@ -1,16 +1,10 @@
+import { Icon, Text } from "@chakra-ui/react";
 import React from "react";
-import { Icon, Text, Image } from "@chakra-ui/react";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaMoon, FaSun } from "react-icons/fa";
+import { useColorMode } from "../components/ui/color-mode";
 import { Switch } from "../components/ui/switch";
-import {
-  ColorModeButton,
-  DarkMode,
-  LightMode,
-  useColorMode,
-  useColorModeValue,
-} from "../components/ui/color-mode";
 export default function Navbar() {
-  const { setColorMode, colorMode } = useColorMode();
+  const { toggleColorMode, colorMode } = useColorMode();
 
   return (
     <nav
@@ -26,19 +20,8 @@ export default function Navbar() {
           <FaCode />
         </Icon>
       </div>
-      <div className="flex gap-4 lg:gap-30">
-        <Switch
-          checked={colorMode === "light"}
-          onCheckedChange={() =>
-            setColorMode(colorMode === "light" ? "dark" : "light")
-          }
-        >
-          {" "}
-          <span className=" hidden md:inline pl-4">
-            {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
-          </span>
-        </Switch>
-        <ul className="flex gap-4" style={{ paddingInline: "10px" }}>
+      <div className="flex gap-4 ">
+        <ul className="flex gap-4" style={{ paddingInline: "20px" }}>
           <li className="hover:underline">
             <a href="#About">About</a>
           </li>
@@ -46,6 +29,17 @@ export default function Navbar() {
             <a href="#Projects">Projects</a>
           </li>
         </ul>
+        <div style={{paddingRight:'10px'}}>
+            <Switch
+              size="md"
+              onCheckedChange={toggleColorMode}
+              checked={colorMode === "light" ? true : false}
+              trackLabel={{
+                on: <FaMoon style={{ color: "lightgray" }} />,
+                off: <FaSun style={{ color: "gold" }} />,
+              }}
+            />
+        </div>
       </div>
     </nav>
   );
