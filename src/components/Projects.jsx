@@ -28,7 +28,7 @@ export default function Projects() {
     {
       title: "Issue Tracker",
       technologies: ["NextJS", "Radix UI", "Prisma", "Tailwind CSS",],
-      imageSrc: issueTrackerScreenShot,
+      imageSrc: '',
       description:
         "This is an issue tracker application that allows you to create issues",
       liveSite: "",
