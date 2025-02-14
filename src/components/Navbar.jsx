@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav
       className={`${
         colorMode === "dark" ? "bg-cyan-700" : "bg-cyan-400"
-      } fixed top-0  justify-between right-0 left-0 z-10 flex items-center navbar`}
+      } fixed top-0  justify-between w-full z-10 flex items-center navbar`}
     >
       <div className="flex items-center gap-2 ">
         <Text className="inline" fontSize="xl">
@@ -29,16 +29,16 @@ export default function Navbar() {
             <a href="#Projects">Projects</a>
           </li>
         </ul>
-        <div style={{paddingRight:'10px'}}>
-            <Switch
-              size="md"
-              onCheckedChange={toggleColorMode}
-              checked={colorMode === "light" ? true : false}
-              trackLabel={{
-                on: <FaMoon style={{ color: "lightgray" }} />,
-                off: <FaSun style={{ color: "gold" }} />,
-              }}
-            />
+        <div style={{ paddingRight: "10px" }}>
+          <Switch
+            size="md"
+            onCheckedChange={toggleColorMode}
+            checked={colorMode === "light" ? true : false}
+            trackLabel={{
+              on: <FaMoon style={{ color: "lightgray" }} />,
+              off: <FaSun style={{ color: "gold" }} />,
+            }}
+          />
         </div>
       </div>
     </nav>

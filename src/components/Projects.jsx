@@ -14,7 +14,7 @@ import CLIEmployeeTrackerScreenshot from "../assets/img/cli-employee-tracker.png
 import { useState } from "react";
 
 export default function Projects() {
-  const [projects, setProjects] = useState([
+  const projectsObj = [
     {
       id: 1,
       title: "Video Game Discovery App",
@@ -34,7 +34,7 @@ export default function Projects() {
       technologies: ["NextJS", "Radix UI", "Prisma", "Tailwind CSS"],
       imageSrc: issueTrackerScreenshot,
       description:
-        "This is an issue tracker application that allows you to create issues",
+        "This is an issue tracker application that allows you to Create, Edit, Update and Delete issues. This application was built from using NextJS, NextAuth for authentication, Prisma as the ORM, MySQL for the database, tailwind for the styling, as well as Radix for the front-end component library. This app connects to an external database and saves user information, regarding issues, and their login information.",
       liveSite: "",
       videoURL: "",
       gitRepo: "https://github.com/Rilwan0410/issue_tracker",
@@ -45,7 +45,8 @@ export default function Projects() {
       collapse: false,
       technologies: ["NextJS", "React", "Tailwind CSS"],
       imageSrc: HBOCloneScreenshot,
-      description: "This is clone of the popular App HBO",
+      description:
+        "This is clone of the popular App HBO built using, NextJS, React and Tailwind CSS. This is one of the first projects I built using NextJS and it taught me alot about the framework. This application allows you to look up movies and access a thirdy-party API from the movieDB. There are countless movies to search from, and with each movie search, you will have access to valuable information such, as the cast of the movie, the starring roles, of the movies and more.",
       liveSite: "https://re-hboclone.netlify.app/create",
       videoURL: "",
       gitRepo: "https://github.com/Rilwan0410/HBO_CLONE",
@@ -62,7 +63,8 @@ export default function Projects() {
       videoURL: "https://watch.screencastify.com/v/zrqiK8EbHtwFVm4KKHPY",
       gitRepo: "https://github.com/Rilwan0410/cli-employee-tracker",
     },
-  ]);
+  ];
+  const [projects, setProjects] = useState(projectsObj);
 
   const collapseText = (id, val) => {
     let obj = projects.filter((proj) => proj.id === id);
