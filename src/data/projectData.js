@@ -14,7 +14,7 @@ export default [
     technologies: ["React", "React Router", "Chakra UI", "Tailwind CSS"],
     imageSrc: videoGameAppScreenshot,
     description:
-      "This is an Game application built using React, React Router, using Chakra UI and Tailwind CSS. This app allows you to look and find valuable information about any game you can think about. Using the Rawg database, there are over 800,000 video games that you can filter through and find out information about multiple games as well as the platforms they are available for and more.",
+      "This is an Game application built using React, React Router, using Chakra UI and Tailwind CSS. This app allows you to look and find valuable information about any game you can think about. Using the Rawg API database, there are over 800,000 video games that you can filter through and find out information about multiple games as well as the platforms they are available for and more.",
     liveSite: "https://video-game-discovery-app-nu.vercel.app/",
     videoURL: "",
     gitRepo: "https://github.com/Rilwan0410/video-game-discovery-app",
