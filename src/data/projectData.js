@@ -34,7 +34,7 @@ export default [
     imageSrc: issueTrackerScreenshot,
     description:
       "This is an issue tracker application that allows you to Create, Edit, Update and Delete issues. This application was built from using NextJS, NextAuth for authentication, Prisma as the ORM, MySQL for the database, tailwind for the styling, as well as Radix for the front-end component library. This app connects to an external database and saves user information, regarding issues, and their login information.",
-    liveSite: "",
+    liveSite: "https://issue-tracker-five-iota.vercel.app/",
     videoURL: "",
     gitRepo: "https://github.com/Rilwan0410/issue_tracker",
   },
