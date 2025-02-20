@@ -17,6 +17,7 @@ import gitLogo from "../assets/svg/git-logo.svg";
 import nextJsLogo from "../assets/svg/next-js.svg";
 import reduxLogo from "../assets/svg/redux.svg";
 import githubLogo from "../assets/svg/github.svg";
+import UMCert from "../assets/img/um-bootcamp-cert.png";
 
 export default function AboutMe() {
   return (
@@ -35,11 +36,11 @@ export default function AboutMe() {
         </Heading>
         <Text mt="3" style={{ lineHeight: "35px" }} fontSize={{ md: "lg" }}>
           {" "}
-          My Name is Rilwan Etti and I am a{" "}
+          My name is Rilwan Etti and I am a{" "}
           <span style={{ fontWeight: "bold" }}>
             Full Stack Web Developer
           </span>{" "}
-          Based in{" "}
+          based in{" "}
           <span style={{ fontWeight: "bold" }}>Pembroke Pines Florida</span>. My
           passion for Web Development sparked in 2022 when I took a leap and
           decided to step into this unfamiliar field that I had no prior
@@ -51,7 +52,12 @@ export default function AboutMe() {
           the fact that you have to keep learning and staying sharp in order to
           thrive and continue to grow. I have graduated from a Full-Stack
           Bootcamp From the{" "}
-          <span style={{ fontWeight: "bold" }}>University Of Miami</span>.
+          <span style={{ fontWeight: "bold" }}>
+            <a href={UMCert} target="_blank">
+              University Of Miami
+            </a>
+          </span>
+          .
         </Text>
       </div>
 
